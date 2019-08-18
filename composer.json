@@ -17,9 +17,13 @@
             "name": "Nastase Alexandru",
             "email": "admin@themovieclips.com"
         }
-    ],
+    ],   
     "minimum-stability": "dev",
-    "require": {},
+    "autoload": {
+        "psr-0": {
+            "FireItSoft\\AffiliateNetworks\\": "src/"
+        }
+    },     
     "extra": {
         "laravel": {
             "providers": [
