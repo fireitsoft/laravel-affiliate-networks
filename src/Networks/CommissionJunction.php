@@ -74,7 +74,7 @@ class CommissionJunction {
         $limit = 100;
         $coupons = array(); 
         
-        $url = "https://link-search.api.cj.com/v2/link-search?website-id=".$this->website_id."&link-type=banner&advertiser-ids=joined&promotion-type=coupon&records-per-page=".$limit."&page-number=1";
+        $url = "https://link-search.api.cj.com/v2/link-search?website-id=".$this->website_id."&link-type=Text Link&advertiser-ids=joined&promotion-type=coupon&records-per-page=".$limit."&page-number=1";
         
         $request = new Request();
         $request->setHeader(array('Authorization' =>'Bearer '.$this->access_token));
@@ -86,7 +86,7 @@ class CommissionJunction {
         
         for ($i = 1; $i <= $totalpages; $i++) {
             
-            $url = "https://link-search.api.cj.com/v2/link-search?website-id=".$this->website_id."&link-type=banner&advertiser-ids=joined&promotion-type=coupon&records-per-page=".$limit."&page-number=".$i;   
+            $url = "https://link-search.api.cj.com/v2/link-search?website-id=".$this->website_id."&link-type=Text Link&advertiser-ids=joined&promotion-type=coupon&records-per-page=".$limit."&page-number=".$i;   
             $request = new Request();
             $request->setHeader(array('Authorization' =>'Bearer '.$this->access_token));
             $response = $request->getContent($url);
@@ -121,7 +121,7 @@ class CommissionJunction {
         $limit = 100;
         $deals = array(); 
         
-        $url = "https://link-search.api.cj.com/v2/link-search?website-id=".$this->website_id."&link-type=banner&advertiser-ids=joined&promotion-type=sale/discount&records-per-page=".$limit."&page-number=1";
+        $url = "https://link-search.api.cj.com/v2/link-search?website-id=".$this->website_id."&link-type=Text Link&advertiser-ids=joined&promotion-type=sale/discount&records-per-page=".$limit."&page-number=1";
         
         $request = new Request();
         $request->setHeader(array('Authorization' =>'Bearer '.$this->access_token));
@@ -133,7 +133,7 @@ class CommissionJunction {
         
         for ($i = 1; $i <= $totalpages; $i++) {
             
-            $url = "https://link-search.api.cj.com/v2/link-search?website-id=".$this->website_id."&link-type=banner&advertiser-ids=joined&promotion-type=sale/discount&records-per-page=".$limit."&page-number=".$i;   
+            $url = "https://link-search.api.cj.com/v2/link-search?website-id=".$this->website_id."&link-type=Text Link&advertiser-ids=joined&promotion-type=sale/discount&records-per-page=".$limit."&page-number=".$i;   
             $request = new Request();
             $request->setHeader(array('Authorization' =>'Bearer '.$this->access_token));
             $response = $request->getContent($url);
