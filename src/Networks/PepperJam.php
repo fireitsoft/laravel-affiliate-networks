@@ -82,18 +82,7 @@ class PepperJam {
                 $coupon['id'] = $item->id;
                 $coupon['title'] = str_replace($item->coupon, '', $item->name); 
                 $coupon['description'] = str_replace($item->coupon, '', $item->description); 
-                $coupon['code'] = trim($item->coupon);
-                $coupon['code'] = str_replace('no code needed', '', strtolower($coupon['code']));
-                $coupon['code'] = str_replace('no code required', '', strtolower($coupon['code']));
-                $coupon['code'] = str_replace('no coupon necessary', '', strtolower($coupon['code']));
-                $coupon['code'] = str_replace('no coupon required', '', strtolower($coupon['code']));
-                $coupon['code'] = str_replace('no code', '', strtolower($coupon['code']));
-                $coupon['code'] = str_replace('none needed', '', strtolower($coupon['code']));
-                $coupon['code'] = str_replace('none required', '', strtolower($coupon['code']));
-                $coupon['code'] = str_replace('n/a', '', strtolower($coupon['code']));
-                $coupon['code'] = str_replace('none', '', strtolower($coupon['code']));
-                if(empty($coupon['code']))
-                unset($coupon['code']);
+                $coupon['code'] = $item->coupon;
                 $coupon['expire'] = $item->end_date;
                 $coupon['url'] = $item->code;
                 $coupon['merchant_id'] = $item->program_id;                

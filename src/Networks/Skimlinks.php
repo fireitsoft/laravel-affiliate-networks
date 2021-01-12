@@ -91,19 +91,7 @@ class Skimlinks {
                             $coupon['id'] = $item->id;
                             $coupon['title'] = $item->title;
                             $coupon['description'] = str_replace($item->coupon_code, '', $item->description);
-                            $coupon['code'] = trim($item->coupon_code);
-                            $coupon['code'] = str_replace('no code needed', '', strtolower($coupon['code']));
-                            $coupon['code'] = str_replace('no code required', '', strtolower($coupon['code']));
-                            $coupon['code'] = str_replace('no coupon necessary', '', strtolower($coupon['code']));
-                            $coupon['code'] = str_replace('no coupon required', '', strtolower($coupon['code']));
-                            $coupon['code'] = str_replace('no code', '', strtolower($coupon['code']));
-                            $coupon['code'] = str_replace('none needed', '', strtolower($coupon['code']));
-                            $coupon['code'] = str_replace('none required', '', strtolower($coupon['code']));
-                            $coupon['code'] = str_replace('n/a', '', strtolower($coupon['code']));
-                            $coupon['code'] = str_replace('none', '', strtolower($coupon['code']));
-                            if(empty($coupon['code']))
-                            unset($coupon['code']);                            
-                            
+                            $coupon['code'] = $item->coupon_code;
                             if($item->terms)
                             $coupon['terms'] = $item->terms;
                             $coupon['expire'] = $item->offer_ends;

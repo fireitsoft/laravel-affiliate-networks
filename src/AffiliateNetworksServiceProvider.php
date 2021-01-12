@@ -24,7 +24,7 @@ class AffiliateNetworksServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(AffiliateNetworksManager::class, function ($app) {
+        $this->app->singleton(Connection::class, function ($app) {
             return new AffiliateNetworksManager();
         });
       //  $this->app->alias('AffiliateNetworksManager', AffiliateNetworksManager::class);
