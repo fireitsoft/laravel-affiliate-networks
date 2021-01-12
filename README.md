@@ -5,7 +5,7 @@ Laravel package to access different affiliate networks.
 Installation 
 
 ```php
-    composer require fireitsoft/affiliate-networks
+    composer require fireitsoft/affiliatenetworks
 ```
 
 
