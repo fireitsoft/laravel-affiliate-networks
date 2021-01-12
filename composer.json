@@ -1,13 +1,14 @@
 {
     "name": "fireitsoft/affiliatenetworks",
     "description": "Laravel package for integrating affiliate networks",
+    "license": "MIT",
     "require": {
         "guzzlehttp/guzzle": "^6.3@dev",
         "yangqi/htmldom": "1.0.*",
         "nesbot/carbon": "^2.23.0"
     },
     "keywords": [
-        "laravel","affiliate","SkimLinks","Viglink"
+        "laravel","affiliate","SkimLinks","Viglink", "CJ"
     ],     
     "require-dev": {
         "phpunit/phpunit": "^8.3@dev"
@@ -20,7 +21,7 @@
     ],   
     "minimum-stability": "dev",
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "FireItSoft\\AffiliateNetworks\\": "src/"
         }
     },     
